@@ -22,7 +22,7 @@ def guess_user_number(lowerlimit, upperlimit, total_guesses = 0):
 	mid = (upperlimit + lowerlimit) // 2
 
 	# Ask user if mid is their number and initialize VALID_RESPONSES constant.	
-	useranswer = input(f"Is it {mid}? Enter Y for Yes, L if your number is lower than {mid}, or H if your number is higher than {mid}.").lower()
+	useranswer = input(f"Is it {mid}? Enter Y for Yes, L if your number is lower than {mid}, or H if your number is higher than {mid}.  ").lower()
 	VALID_RESPONSES = ("y", "l", "h")
 
 	# Increment the total number of guesses.
@@ -31,7 +31,7 @@ def guess_user_number(lowerlimit, upperlimit, total_guesses = 0):
 	# Check if useranswer is in VALID_RESPONSES
 	while True:
 		if useranswer not in VALID_RESPONSES:
-			print("Please enter a valid response")
+			useranswer = input("Please enter a valid response. (Y/L/H): ")
 		else:
 			break
 
