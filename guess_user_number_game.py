@@ -62,8 +62,8 @@ if __name__ == "__main__":
 		while True:
 			try:
 				# Collect user input for lower and upper limits.
-				lowerlimit = int(input("Chose your lower limit: "))
-				upperlimit = int(input("Chose your upper limit:"))
+				lowerlimit = int(input("Choose your lower limit: "))
+				upperlimit = int(input("Choose your upper limit:"))
 
 				if lowerlimit >= upperlimit:
 					print("The lower limit must be less than the upper limit")
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 		guesses = math.ceil(math.log2(upperlimit - lowerlimit))
 
 		# Explain the game.
-		print(f"Pick a whole number between your chosen lower limit {lowerlimit} and upper limit {upperlimit}. I will guess your number in only {guesses} guesses. No Cheating!")
+		print(f"Pick a whole number between your chosen lower limit, {lowerlimit}, and upper limit, {upperlimit}. I will guess your number in only {guesses} guesses. No Cheating!")
 
 		# Begin the game by calling the guess_user_number function.
 		guess_user_number(lowerlimit, upperlimit)
